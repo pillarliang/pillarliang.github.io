@@ -7,15 +7,17 @@ on:
     paths-ignore:
       - 'docs/**'  # 如果您将构建输出到 docs 目录，防止无限循环
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-      - name: checkout
+      - name: 检出代码
         uses: actions/checkout@v3
 
       - name: 设置 Ruby 环境
@@ -29,12 +31,20 @@ jobs:
           bundle install
 
       - name: 构建网站
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --destination ./_site
 
-      - name: 部署到 GitHub Pages
+      - name: 上传 artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./_site
+          path: ./_site  # 指定构建输出目录
 
-      - name: 部署
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v1
