@@ -34,7 +34,7 @@ jobs:
         run: bundle exec jekyll build --destination ./_site
 
       - name: 上传 artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site  # 指定构建输出目录
 
@@ -47,4 +47,4 @@ jobs:
     steps:
       - name: 部署到 GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
