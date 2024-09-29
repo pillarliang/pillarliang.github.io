@@ -2,38 +2,39 @@ name: GitHub Pages
 
 on:
   push:
-    branches: # 部署分支
+    branches:
       - main
+    paths-ignore:
+      - 'docs/**'  # 如果您将构建输出到 docs 目录，防止无限循环
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          
-      - name: 设置 Git 配置
-        run: |
-          git config user.name "pillar"
-          git config user.email "pillarliang21@gmail.com"
 
-      - name: set up Ruby
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 设置 Ruby 环境
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.5'
+          ruby-version: '3.0'  # 或者您需要的 Ruby 版本
 
-      - name: install dependencies
+      - name: 安装依赖
         run: |
           gem install bundler
           bundle install
 
-      - name: build
+      - name: 构建网站
         run: bundle exec jekyll build
 
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: 部署到 GitHub Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          path: ./_site
+
+      - name: 部署
+        uses: actions/deploy-pages@v1
