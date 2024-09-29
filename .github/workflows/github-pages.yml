@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
       - name: 检出代码
         uses: actions/checkout@v3
 
@@ -34,7 +39,7 @@ jobs:
         run: bundle exec jekyll build --destination ./_site
 
       - name: 上传 artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site  # 指定构建输出目录
 
