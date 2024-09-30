@@ -60,9 +60,9 @@
                             {% assign reversed_posts = site[collection.label] %}
                         {% endif %}
 
-                        {% if collection.label == "notes" %}
+                        {% if collection.label == "llm" %}
                             <!-- 处理 notes 集合，按子文件夹分组 -->
-                            {% assign grouped_notes = site.notes | group_by_exp: "item", "item.path | split: '/' | slice: 1 | first" %}
+                            {% assign grouped_notes = site.llm | group_by_exp: "item", "item.path | split: '/' | slice: 1 | first" %}
                             {% for group in grouped_notes %}
                                 <!-- 检查当前组是否包含当前页面 -->
                                 {% assign is_current_group = false %}
@@ -118,9 +118,9 @@
                             {% assign reversed_posts = site[collection.label] %}
                         {% endif %}
 
-                        {% if collection.label == "notes" %}
+                        {% if collection.label == "llm" %}
                             <!-- 处理 notes 集合，按子文件夹分组 -->
-                            {% assign grouped_notes = site.notes | group_by_exp: "item", "item.path | split: '/' | slice: 1 | first" %}
+                            {% assign grouped_notes = site.llm | group_by_exp: "item", "item.path | split: '/' | slice: 1 | first" %}
                             {% for group in grouped_notes %}
                                 <!-- 检查当前组是否包含当前页面 -->
                                 {% assign is_current_group = false %}

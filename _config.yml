@@ -1,10 +1,10 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            pillar's blog
+longtitle:        pillar's blog
+author:           Liang Zhu
+email:            pillarliang21@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  liangzhu (aka pillar's blog
 
 version:          1.0
 gitbook_version:  3.2.3
@@ -19,7 +19,7 @@ remote_theme: sighingnow/jekyll-gitbook
 toc:
   enabled: true
   h_min:   1
-  h_max:   3
+  h_max:   5
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
@@ -53,18 +53,19 @@ collections:
   pages:
     output: true
     permalink: /:collection/:path/
-  others:
-    output: true
-    permalink: /:collection/:path/
-  notes:
+  # others:
+  #   output: true
+  #   permalink: /:collection/:path/
+  llm:
     output: true
     permalink: /:collection/:path/
 
 ordered_collections:
+  - llm
   - posts
   - pages
-  - others
-  - notes
+  # - others
+
 
 page_width: 800px
 

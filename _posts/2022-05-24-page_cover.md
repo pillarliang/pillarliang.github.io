@@ -20,3 +20,4 @@ a `cover` field to the page metadata:
 + cover: /assets/jekyll-gitbook/dinosaur.gif
   ---
 ```
+
