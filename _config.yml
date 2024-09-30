@@ -56,11 +56,15 @@ collections:
   others:
     output: true
     permalink: /:collection/:path/
+  notes:
+    output: true
+    permalink: /:collection/:path/
 
 ordered_collections:
   - posts
   - pages
   - others
+  - notes
 
 page_width: 800px
 

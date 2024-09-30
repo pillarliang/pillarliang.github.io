@@ -3,7 +3,7 @@
         // Fixes the page links scroll problem on both desktop and mobile browsers
         function pageScrollToTop(element) {
             // both mobile and non-mobile
-            $('div.body-inner').animate({scrollTop: 0});
+            $('div.body-inner').animate({ scrollTop: 0 });
             $(element).parent().find('li>ul>li').removeClass('active');
             return true;  // propagate
         }
@@ -28,15 +28,16 @@
             <input type="text" placeholder="Type to search" />
         </div>
         <div id="book-search-input-link" role="search">
-            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
+            <a href="{{ site.baseurl }}/assets/search.html">Click to Search</a>
         </div>
         <ul class="summary">
+            <!-- 首页链接 -->
             {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
+            <li class="chapter active" data-level="1.1" data-path="{{ site.baseurl }}">
             {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
+            <li class="chapter" data-level="1.1" data-path="{{ site.baseurl }}">
             {% endif %}
-                <a href="{{site.baseurl}}/" onclick="pageScrollToTop(this)">
+                <a href="{{ site.baseurl }}/" onclick="pageScrollToTop(this)">
                     {{ site.title | escape }}
                 </a>
                 {% if site.toc.enabled %}
@@ -48,10 +49,10 @@
 
             <li class="divider"></li>
 
+            <!-- 处理集合 -->
             {% if site.ordered_collections %}
                 {% for label in site.ordered_collections %}
                     {% assign collection = site.collections | where: "label", label | first %}
-                    <!-- <p>{{ collection.label }}</p> -->
                     {% if collection.output %}
                         {% if collection.label == "posts" %}
                             {% assign reversed_posts = site[collection.label] | reverse %}
@@ -59,31 +60,57 @@
                             {% assign reversed_posts = site[collection.label] %}
                         {% endif %}
 
-                        {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
-                                </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                        {% if collection.label == "notes" %}
+                            <!-- 处理 notes 集合，按子文件夹分组 -->
+                            {% assign grouped_notes = site.notes | group_by_exp: "item", "item.path | split: '/' | slice: 1 | first" %}
+                            {% for group in grouped_notes %}
+                                <!-- 检查当前组是否包含当前页面 -->
+                                {% assign is_current_group = false %}
+                                {% for note in group.items %}
+                                    {% if note.url == page.url %}
+                                        {% assign is_current_group = true %}
+                                        {% break %}
                                     {% endif %}
-                                {% endif %}
-                            </li>
-                        {% endfor %}
+                                {% endfor %}
 
-                        {% if reversed_posts.size > 0 %}
+                                <li class="chapter collapsible contracted" data-level="2">
+                                    <!-- 折叠项标题 -->
+                                    <a href="#" class="sectitle"  onclick="pageScrollToTop(this)">{{ group.name }}</a>
+                                    <ul>
+                                        {% for note in group.items %}
+                                            <li class="chapter{% if page.url == note.url %} active{% endif %}" data-level="1.1" data-path="{{ site.baseurl }}{{ note.url }}">
+                                                <a href="{{ site.baseurl }}{{ note.url }}" onclick="pageScrollToTop(this)">
+                                                    {{ note.title | escape }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
                             <li class="divider"></li>
+                        {% else %}
+                            <!-- 处理其他集合 -->
+                            {% for post in reversed_posts %}
+                                <li class="chapter{% if page.url == post.url %} active{% endif %}" data-level="1.1" data-path="{{ site.baseurl }}{{ post.url }}">
+                                    <a href="{{ site.baseurl }}{{ post.url }}" onclick="pageScrollToTop(this)">
+                                        {{ post.title | escape }}
+                                    </a>
+                                    {% if site.toc.enabled %}
+                                        {% if page.url == post.url %}
+                                            {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                        {% endif %}
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                            {% if reversed_posts.size > 0 %}
+                                <li class="divider"></li>
+                            {% endif %}
                         {% endif %}
                     {% endif %}
                 {% endfor %}
             {% else %}
+                <!-- 如果未定义 ordered_collections，处理所有集合 -->
                 {% for collection in site.collections %}
-                    <!-- <p>{{ collection.label }}</p> -->
                     {% if collection.output %}
                         {% if collection.label == "posts" %}
                             {% assign reversed_posts = site[collection.label] | reverse %}
@@ -91,25 +118,51 @@
                             {% assign reversed_posts = site[collection.label] %}
                         {% endif %}
 
-                        {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
-                                </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                        {% if collection.label == "notes" %}
+                            <!-- 处理 notes 集合，按子文件夹分组 -->
+                            {% assign grouped_notes = site.notes | group_by_exp: "item", "item.path | split: '/' | slice: 1 | first" %}
+                            {% for group in grouped_notes %}
+                                <!-- 检查当前组是否包含当前页面 -->
+                                {% assign is_current_group = false %}
+                                {% for note in group.items %}
+                                    {% if note.url == page.url %}
+                                        {% assign is_current_group = true %}
+                                        {% break %}
                                     {% endif %}
-                                {% endif %}
-                            </li>
-                        {% endfor %}
+                                {% endfor %}
 
-                        {% if reversed_posts.size > 0 %}
+                                <li class="chapter collapsible" data-level="2">
+                                    <!-- 折叠项标题 -->
+                                    <a href="#" class="sectitle" onclick="pageScrollToTop(this)">{{ group.name }}</a>
+                                    <ul class="articles">
+                                        {% for note in group.items %}
+                                            <li class="chapter{% if page.url == note.url %} active{% endif %}" data-level="1.1" data-path="{{ site.baseurl }}{{ note.url }}">
+                                                <a href="{{ site.baseurl }}{{ note.url }}" onclick="pageScrollToTop(this)">
+                                                    {{ note.title | escape }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
                             <li class="divider"></li>
+                        {% else %}
+                            <!-- 处理其他集合 -->
+                            {% for post in reversed_posts %}
+                                <li class="chapter{% if page.url == post.url %} active{% endif %}" data-level="1.1" data-path="{{ site.baseurl }}{{ post.url }}">
+                                    <a href="{{ site.baseurl }}{{ post.url }}" onclick="pageScrollToTop(this)">
+                                        {{ post.title | escape }}
+                                    </a>
+                                    {% if site.toc.enabled %}
+                                        {% if page.url == post.url %}
+                                            {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                        {% endif %}
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                            {% if reversed_posts.size > 0 %}
+                                <li class="divider"></li>
+                            {% endif %}
                         {% endif %}
                     {% endif %}
                 {% endfor %}
