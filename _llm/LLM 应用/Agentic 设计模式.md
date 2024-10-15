@@ -7,8 +7,6 @@ layout: post
 permalink: /llm/app/agentic-patterns
 ---
 
-# Agentic Design Patterns
-
 我们要挖掘和利用 LLM 涌现出的能力。利用 LLM 能力(也可以概括为 Agent)的两种方式如下，：
 
 1. In context leanring
