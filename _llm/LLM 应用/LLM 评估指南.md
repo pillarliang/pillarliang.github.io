@@ -1,10 +1,11 @@
 ---
-title： "LLM 评估指南"
-author： pillar
-date： 2024-10-15
-category： llm
-layout： post
-permalink： /llm/app/llm-evaluation
+title: "LLM 评估指南"
+author: pillar
+date: 2024-10-10
+category: llm
+layout: post
+permalink: /llm/app/llm-evaluation
+
 ---
 
 目前有三种主要的评估方式：自动基准测试、人工评估和使用模型评估。
