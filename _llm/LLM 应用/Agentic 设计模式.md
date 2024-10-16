@@ -68,8 +68,7 @@ LLM被赋予可以请求调用以收集信息、采取行动或操纵数据的�
 
 - 规划模式允许 agent 基于计划的任务步骤对生成的内容进行反复优化和处理，从而产生更高质量的输出。
 
-
-
+### Openai-o1 one shot [WIP]
 
 
 ## 4. Multiagent Collaboration Mode
@@ -79,14 +78,8 @@ LLM被赋予可以请求调用以收集信息、采取行动或操纵数据的�
 - 背景：大型模型有时会遇到需要团队合作才能完成的系统性任务，而单个 Agent 通常只关注特定的能力。
 - 情景：用户只需用自然语言填写配置文件，就可以轻松为各种功能和用例定义多代理系统，特别是在涉及不同角色（如编剧/小说创作）的内容创作工作室中。
 
+### Swarm[WIP]
 
 
-
-
-
-
-
-
-Reference:
-
-https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/
+*Reference:*
+[https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/](https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/)
