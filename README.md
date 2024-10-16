@@ -10,3 +10,5 @@ permalink: /
 - [Agentic 设计模式](/llm/app/agentic-patterns)
 - [NL2SQL](/llm/app/nl2sql)
 - [LLM 评估指南](/llm/app/llm-evaluation)
+- [模型部署](/llm/app/llm-deploy)
+
