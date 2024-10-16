@@ -1,0 +1,917 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>混合检索 · pillar&#39;s blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="liangzhu (aka pillar's blog
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Liang Zhu"><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/llm/app/llm-evaluation" />
+        
+
+        
+    </head>
+    <body>
+        <div class="book"><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({ scrollTop: 0 });
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                let target = $($(element).attr('href'));
+                if (target.length) {
+                    $('div.body-inner').animate({
+                        scrollTop: target.get(0).offsetTop,
+                    });
+                }
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <!-- 首页链接 -->
+            
+            <li class="chapter" data-level="1.1" data-path="">
+            
+                <a href="/" onclick="pageScrollToTop(this)">
+                    pillar&#39;s blog
+                </a>
+                
+                    
+                
+            </li>
+
+            <li class="divider"></li>
+
+            <!-- 处理集合 -->
+            
+                
+                    
+                    
+                        
+
+                        
+                            <!-- 处理 notes 集合，按子文件夹分组 -->
+                            
+                            
+                                <!-- 检查当前组是否包含当前页面 -->
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                        
+
+                                <li class="chapter collapsible contracted" data-level="2">
+                                    <!-- 折叠项标题 -->
+                                    <a href="#" class="sectitle"  onclick="pageScrollToTop(this)">LLM 应用</a>
+                                    <ul>
+                                        
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/multimodal-doc">
+                                                <a href="/llm/app/multimodal-doc" onclick="pageScrollToTop(this)">
+                                                    多模态文档检索
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/agentic-patterns">
+                                                <a href="/llm/app/agentic-patterns" onclick="pageScrollToTop(this)">
+                                                    Agentic Design Patterns
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/llm-evaluation">
+                                                <a href="/llm/app/llm-evaluation" onclick="pageScrollToTop(this)">
+                                                    LLM 评估指南
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="chapter active" data-level="1.1" data-path="/llm/app/hybrid-search">
+                                                <a href="/llm/app/hybrid-search" onclick="pageScrollToTop(this)">
+                                                    混合检索
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <!-- 检查当前组是否包含当前页面 -->
+                                
+                                
+                                    
+                                
+
+                                <li class="chapter collapsible contracted" data-level="2">
+                                    <!-- 折叠项标题 -->
+                                    <a href="#" class="sectitle"  onclick="pageScrollToTop(this)">深度学习</a>
+                                    <ul>
+                                        
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/neural-network">
+                                                <a href="/llm/app/neural-network" onclick="pageScrollToTop(this)">
+                                                    神经网络
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                            <li class="divider"></li>
+                        
+                    
+                
+                    
+                    
+                        
+
+                        
+                            <!-- 处理其他集合 -->
+                            
+                            
+                        
+                    
+                
+                    
+                    
+                        
+
+                        
+                            <!-- 处理其他集合 -->
+                            
+                                <li class="chapter" data-level="1.1" data-path="/pages/about/">
+                                    <a href="/pages/about/" onclick="pageScrollToTop(this)">
+                                        About
+                                    </a>
+                                    
+                                        
+                                    
+                                </li>
+                            
+                                <li class="chapter" data-level="1.1" data-path="/pages/contact/">
+                                    <a href="/pages/contact/" onclick="pageScrollToTop(this)">
+                                        Contact
+                                    </a>
+                                    
+                                        
+                                    
+                                </li>
+                            
+                                <li class="chapter" data-level="1.1" data-path="/pages/design/draft/">
+                                    <a href="/pages/design/draft/" onclick="pageScrollToTop(this)">
+                                        Draft
+                                    </a>
+                                    
+                                        
+                                    
+                                </li>
+                            
+                            
+                                <li class="divider"></li>
+                            
+                        
+                    
+                
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >混合检索</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/llm/app/混合检索">混合检索</h1>
+                    
+
+                    <h1 id="0-召回">0. 召回</h1>
+
+<p>召回：快速准确获取相关信息的过程。召回可以被理解为<strong>建立索引</strong>和<strong>相似度得分匹配</strong>的结合。</p>
+
+<p>索引负责缩小查找范围，而相似度得分匹配负责对缩小范围内的项进行精细排序。这样，系统能够在保证速度的同时，尽可能提高结果的相关性。</p>
+
+<p><strong>建立索引</strong> ：</p>
+
+<ul>
+  <li><strong>Indexing</strong> 可以视为一种对数据集进行分组的方式。作用是把相似的数据放在一起，在查询时不需要遍历整个数据库，只查看与query 相似的那些数据集合。旨在减少查找时需要扫描的数据量。通过预先组织和存储数据的指针（或引用），索引能够在更小的范围内进行查找，从而显著提高查找速度。例如，B树和哈希表等数据结构都是为了加速查找过程而设计的。</li>
+  <li>索引的核心目的是通过优化数据的组织和访问方式，来加快查找速率。这一过程涉及到数据结构的选择、存储方式的设计以及对查找算法的优化。</li>
+</ul>
+
+<p><strong>相似度得分匹配</strong> ：
+在建立索引之后，系统需要评估每个潜在相关项与查询之间的相关性。这是通过计算相似度得分来实现的。相似度得分用于排序结果，以便返回最相关的项给用户。</p>
+
+<h1 id="1-keyword-based-search"><strong>1. Keyword-based search</strong></h1>
+
+<h2 id="indexing---inverted-index-倒排索引">Indexing - Inverted Index 倒排索引</h2>
+
+<p>倒排（Inverted）索引 - 反转传统文档到词的关系。It is about the mapping between words and document lists.</p>
+
+<ul>
+  <li>在原始数据结构中，一个文档包含多个词。</li>
+  <li>Inverted Index 反转了上述关系。它以词（term）为键，项（倒排列表）存储包含该词的文档信息（如文档ID、词频、位置等）。</li>
+</ul>
+
+<blockquote class="block-tip">
+  <p>假设有以下三个文档：</p>
+
+  <ul>
+    <li><strong>文档1</strong>：<code class="language-plaintext highlighter-rouge">"the cat sat on the mat"</code></li>
+    <li><strong>文档2</strong>：<code class="language-plaintext highlighter-rouge">"the cat lay on the rug"</code></li>
+    <li><strong>文档3</strong>：<code class="language-plaintext highlighter-rouge">"the dog barked at the cat"</code></li>
+  </ul>
+
+  <p>首先，对文档进行预处理（分词、去除停用词等），然后构建倒排索引。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>词项（Term）</th>
+        <th>倒排列表（Posting List）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">the</code></td>
+        <td>文档1, 文档2, 文档3</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">cat</code></td>
+        <td>文档1, 文档2, 文档3</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">sat</code></td>
+        <td>文档1</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">on</code></td>
+        <td>文档1, 文档2</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">mat</code></td>
+        <td>文档1</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">lay</code></td>
+        <td>文档2</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">rug</code></td>
+        <td>文档2</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">dog</code></td>
+        <td>文档3</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">barked</code></td>
+        <td>文档3</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">at</code></td>
+        <td>文档3</td>
+      </tr>
+    </tbody>
+  </table>
+
+</blockquote>
+
+<h2 id="similarity-score---bm25--best-matching-25">Similarity score - BM25 | Best Matching 25</h2>
+
+<p>BM25 ranking 算法通过考虑词项频率、逆文档频率和文档长度归一化，在提高搜索引擎性能方面发挥了重要作用。</p>
+
+<p><img src="../../assets/images/image-20241016104217150.png" class="center-image" alt="image-20241016104217150" style="zoom: 25%;" /></p>
+
+<p>对于查询 $Q$，文档 $D$ 的 BM25 分数是各个 $query$ 项分数的总和。</p>
+
+<ul>
+  <li>$D$  : 文档</li>
+  <li>$Q$  : 查询</li>
+  <li>$q_i$  : 查询中的第  $i$  个词</li>
+  <li>$f(q_i, D)$  : 词  $q_i$  在文档  $D$  中的出现频率</li>
+  <li>$｜D｜$  : 文档  $D$  的长度（词数）</li>
+  <li>$\overline{｜D｜}$  : 文档集合的平均长度</li>
+  <li>$k_1$  和  $b$  : 调节参数，通常取值为  $k_1 \approx 1.2$  到  $2.0$  之间， $b$  一般取值为  $0.75$ 。</li>
+</ul>
+
+<h3 id="key-components-of-bm25"><strong>Key Components of BM25</strong></h3>
+
+<ul>
+  <li>
+    <p><strong>TF - Term Frequency - 词频</strong>
+一个词在一篇文档中出现的次数。一般来说，一个词出现得越多，它的词频就越高。文档与查询的相关性就越高。</p>
+  </li>
+  <li>
+    <p><strong>IDF - Inverse Document Frequency</strong>
+IDF: 衡量一个词的重要性的指标，在整个语料库中出现次数越少分数越高。越具有区分性。</p>
+
+    <p><img src="../../assets/images/image-20241016105736204.png" class="center-image" alt="image-20241016105736204" style="zoom:25%;" /></p>
+
+    <p>其中：</p>
+
+    <ul>
+      <li>$N$ 是文档总数。</li>
+      <li>$n(q_i)$ 是包含词 <em>$q_i$</em> 的文档数量。</li>
+    </ul>
+
+    <p>由于IDF是基于整个文档集合的统计信息，因此对于同一个查询中的所有文档，IDF值是相同的。</p>
+  </li>
+  <li>
+    <p><strong>Document Length Normalization | 文档长度归一化</strong>:
+BM25 引入了文档长度归一化的概念，较长的文档可能会包含更多的词，可能会导致评分时偏向于这些长文档。因此需要进行归一化处理，即通过参数 $b$来调整文档长度对评分的影响。以避免长文档在评分时的不公平优势。</p>
+  </li>
+  <li>
+    <p>Implementation:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">math</span>
+<span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+  
+<span class="k">class</span> <span class="nc">BM25</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">documents</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">documents</span> <span class="o">=</span> <span class="n">documents</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">document_count</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">documents</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">avg_document_length</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">)</span> <span class="o">/</span> <span class="n">self</span><span class="p">.</span><span class="n">document_count</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">term_counts</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">calculate_term_counts</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">k1</span> <span class="o">=</span> <span class="mf">1.2</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="mf">0.75</span>
+  
+    <span class="k">def</span> <span class="nf">calculate_term_counts</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">term_counts</span> <span class="o">=</span> <span class="nc">Counter</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">self</span><span class="p">.</span><span class="n">documents</span><span class="p">:</span>
+            <span class="n">term_counts</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">term_counts</span>
+  
+    <span class="k">def</span> <span class="nf">calculate_idf</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+        <span class="n">document_with_term_count</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">term_counts</span><span class="p">[</span><span class="n">term</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="nf">log</span><span class="p">((</span><span class="n">self</span><span class="p">.</span><span class="n">document_count</span> <span class="o">-</span> <span class="n">document_with_term_count</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">document_with_term_count</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">))</span>
+  
+    <span class="k">def</span> <span class="nf">calculate_bm25_score</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">document_length</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+        <span class="n">query_terms</span> <span class="o">=</span> <span class="nc">Counter</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+  
+        <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">query_terms</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">term</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">self</span><span class="p">.</span><span class="n">documents</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">idf</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">calculate_idf</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+            <span class="n">term_frequency</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="nf">count</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+            <span class="n">numerator</span> <span class="o">=</span> <span class="n">term_frequency</span> <span class="o">*</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">denominator</span> <span class="o">=</span> <span class="n">term_frequency</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">k1</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">document_length</span> <span class="o">/</span> <span class="n">self</span><span class="p">.</span><span class="n">avg_document_length</span><span class="p">))</span>
+            <span class="n">score</span> <span class="o">+=</span> <span class="n">idf</span> <span class="o">*</span> <span class="p">(</span><span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span><span class="p">)</span>
+  
+        <span class="k">return</span> <span class="n">score</span>
+  
+    <span class="k">def</span> <span class="nf">rank_documents</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+        <span class="n">document_scores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">self</span><span class="p">.</span><span class="n">documents</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">calculate_bm25_score</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">document</span><span class="p">)</span>
+            <span class="n">document_scores</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">document</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
+          
+        <span class="n">ranked_documents</span> <span class="o">=</span> <span class="nf">sorted</span><span class="p">(</span><span class="n">document_scores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ranked_documents</span>
+  
+  
+<span class="c1"># Example usage:
+</span><span class="n">documents</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="sh">'</span><span class="s">apple</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">banana</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">orange</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">apple</span><span class="sh">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="sh">'</span><span class="s">banana</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">orange</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">orange</span><span class="sh">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="sh">'</span><span class="s">apple</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">apple</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">banana</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">banana</span><span class="sh">'</span><span class="p">],</span>
+    <span class="p">[</span><span class="sh">'</span><span class="s">orange</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">orange</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">banana</span><span class="sh">'</span><span class="p">]</span>
+<span class="p">]</span>
+  
+<span class="n">bm25</span> <span class="o">=</span> <span class="nc">BM25</span><span class="p">(</span><span class="n">documents</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">apple</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">banana</span><span class="sh">'</span><span class="p">]</span>
+<span class="n">ranked_documents</span> <span class="o">=</span> <span class="n">bm25</span><span class="p">.</span><span class="nf">rank_documents</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+  
+<span class="k">for</span> <span class="n">document</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">ranked_documents</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Document: </span><span class="si">{</span><span class="n">document</span><span class="si">}</span><span class="s">, Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="2-vector-search"><strong>2. vector search</strong></h1>
+
+<p>向量检索的核心思想是将数据（如文本、图像等）转换为高维向量表示，然后通过计算向量之间的相似度来进行检索。</p>
+
+<h4 id="relational-database-vs-vector-database"><strong>relational database vs vector database</strong></h4>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>relational database</th>
+      <th>vector database</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type of data they store</td>
+      <td>structured data</td>
+      <td>unstructured data: text or images</td>
+    </tr>
+    <tr>
+      <td>query results</td>
+      <td>based on matches for specific keywords</td>
+      <td>based on similarity</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>关系型数据库的缺点包括：</p>
+
+<ul>
+  <li>必须事先想好用户可能会搜索什么信息</li>
+  <li>如果用户搜索的关键字没有在数据记录中提及（如书的摘要中未提及“食物”），相关而重要的信息（比如与食物相关的书籍）可能无法被检索到。</li>
+  <li>添加所有可能需要的信息非常耗时，并且仍然无法保证找到的信息是完整的，因为可能无法预测到所有用户查询的需求或关键字。</li>
+</ul>
+
+<h2 id="vector-database"><strong>vector database</strong></h2>
+
+<p>They were used in recommendation systems and have also been used in question-answering applications recently.</p>
+
+<p><a href="https://myscale.com/blog/zh/everything-about-vector-indexing/">理解向量索引</a></p>
+
+<h2 id="indexing"><strong>Indexing</strong></h2>
+
+<p>ANN（Approximate Nearest Neighbors） 是构建索引的原则（策略）。</p>
+
+<blockquote class="block-tip">
+  <p><strong>KNN vs ANN</strong></p>
+
+  <ul>
+    <li>KNN: 直接计算查询点与所有数据点的距离，通常不使用复杂的索引结构。精确但 <strong>time-consuming(耗时)</strong></li>
+    <li>ANN: 使用数据结构（如局部敏感哈希、KD树、HNSW等）来组织数据。这些结构旨在减少搜索空间，使得查找过程更快。在查询时，利用索引快速找到与查询点近似的k个最近邻，而不是精确的最近邻。</li>
+  </ul>
+
+</blockquote>
+
+<p>ANN 算法分为 3 类：Trees、Hashes、Graphs</p>
+
+<ul>
+  <li><strong>查询速度</strong> ：LSH &gt; IVF &gt; HNSW</li>
+  <li><strong>精度</strong> ：HNSW &gt; IVF &gt; LSH</li>
+  <li><strong>数据规模</strong>：LSH ≈ IVF &gt; HNSW</li>
+</ul>
+
+<p><strong>HNSW - 适合高维数据，提供了快速且精度较高的搜索，但构建索引的开销较大，所以对内存的消耗也大。</strong></p>
+
+<h3 id="1-inverted-fileivf--倒排文件">1. <strong>Inverted File(IVF) | 倒排文件</strong></h3>
+
+<p>这是最基本的索引技术。它使用 K-means 聚类等技术将整个数据分成多个簇。对于每个聚类中心，建立一个倒排列表，记录属于该簇的所有向量的ID。数据库中的每个向量都分配给特定的簇。</p>
+
+<p>在查询时，首先计算查询向量与各个<strong>聚类中心</strong>的距离，快速确定查询向量最接近的几个簇。然后，仅在这些候选簇的倒排列表中执行更精细的相似度计算，以找到最近邻向量。</p>
+
+<p><img src="../../assets/images/image-20241016110309741.png" class="center-image" alt="image-20241016110309741" style="zoom:25%;" /></p>
+
+<h4 id="ivf的变体ivfflativfpq和ivfsq"><strong>IVF的变体：IVFFLAT、IVFPQ和IVFSQ</strong></h4>
+
+<p><strong>IVFFLAT</strong></p>
+
+<p>IVFFLAT 是 IVF 的一种基本实现，结合了倒排文件和线性扫描。其过程如下：</p>
+
+<ul>
+  <li><strong>线性扫描</strong> ：在分配到的簇的倒排列表中，通过线性扫描的方式找到与查询向量最相似的向量。</li>
+  <li>IVFFLAT用于数据集不是非常大且搜索过程需要高准确性的场景。由于线性扫描的复杂度，随着簇的规模增大，效率可能会下降。</li>
+</ul>
+
+<p><img src="../../assets/images/image-20241016110358781.png" class="center-image" alt="image-20241016110358781" style="zoom:25%;" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**IVFPQ</td>
+      <td>Inverted File with Product <a href="https://www.notion.so/Fine-Tune-f19edf0433dc48409842c0ef0e01f893?pvs=21">Quantization</a>**</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>在使用 IVF 构建好簇后，如何在簇内高效检索到其中的相似的向量。</p>
+
+<p>在IVFPQ中，簇中的向量被分解为多个子向量。每个子向量使用产品量化（PQ）进行编码。对于查询向量，当确定相关簇后，查询向量也会被分解为相同的子向量，并使用相同的量化方法进行编码。比较时，计算查询向量的量化子向量与簇内所有向量的量化子向量之间的距离（通常是欧氏距离或其他合适的距离度量）。每个子向量的比较会产生一个距离分数。将所有子向量的距离分数加总或合并，得到最终的完整向量的距离分数。</p>
+
+<p>与 <strong>IVFFLAT</strong> 相比，这种方法有两个优点：</p>
+
+<ul>
+  <li>向量以紧凑的方式存储，占用的空间比原始向量少。</li>
+  <li>查询过程更快，因为它不比较所有原始向量，而是比较编码向量。</li>
+</ul>
+
+<p><img src="../../assets/images/image-20241016110419037.png" class="center-image" alt="image-20241016110419037" style="zoom:25%;" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**IVFSQ</td>
+      <td>Inverted File with Scalar Quantization**</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>在IVFSQ中，每个簇中的每个向量都经过标量量化处理。</p>
+
+<ul>
+  <li><strong>标量量化</strong> ：对每个维度进行独立量化，通常使用少量的比特表示每个维度，从而减少存储需求。</li>
+  <li><strong>优点</strong> ：标量量化通常比产品量化更简单，计算开销更小，但可能会导致更大的近似误差。</li>
+</ul>
+
+<blockquote class="block-tip">
+  <p>例子：</p>
+
+  <p>假设你有一个数据点 (3.14159, 2.71828, 1.61803)，而你为每个维度选择的码本是：</p>
+
+  <ul>
+    <li>维度 1: [3.0, 3.5, 4.0, 4.5]</li>
+    <li>维度 2: [2.5, 3.0, 3.5, 4.0]</li>
+    <li>维度 3: [1.5, 2.0, 2.5, 3.0]</li>
+  </ul>
+
+  <p>经过量化，这个数据点可能被映射为 (3.0, 2.5, 1.5)，并且用索引 (0, 0, 0) 来表示。</p>
+</blockquote>
+
+<p><a href="https://www.notion.so/supplement-d830c304f23c4e6e899ca9ebca507823?pvs=21"><strong>supplement</strong></a></p>
+
+<h3 id="2-hierarchical-navigable-small-world-hnsw">2. Hierarchical Navigable Small World (HNSW)</h3>
+
+<p>https://www.pinecone.io/learn/series/faiss/hnsw/</p>
+
+<p>HNSW = probability skip lists + Navigable Small World(NSW) graphs</p>
+
+<p><img src="../../assets/images/image-20241016110437335.png" class="center-image" alt="image-20241016110437335" style="zoom:33%;" /></p>
+
+<h4 id="navigable-small-world--nsw">Navigable Small World | NSW</h4>
+
+<p>是一个搜索复杂度为多对数 $T = O(log n)$的图，它使用贪婪路由。</p>
+
+<p><strong>搜索过程：</strong>从低度顶点开始，到高度顶点结束。由于低度顶点的连接很少(zoom out)，算法可以在它们之间快速移动，有效地导航到最近的邻居可能所在的区域。然后，算法逐渐切换到高度顶点（zoom in），在该区域的顶点中寻找最近的邻居。</p>
+
+<p><img src="../../assets/images/image-20241016110458097.png" class="center-image" alt="image-20241016110458097" style="zoom:25%;" /></p>
+
+<p><strong>NSW图构建</strong>：每个新点都向其K近邻连边，那么早连的边就会成为long range link。</p>
+
+<p><img src="../../assets/images/image-20241016110508421.png" class="center-image" alt="image-20241016110508421" style="zoom: 33%;" /></p>
+
+<h4 id="hnsw算法"><strong>HNSW算法</strong></h4>
+
+<p>HSNW基于与skip list 和 Navigable Small World 相同的原理。它的结构是一个多层图，顶层的连接较少，底层的区域较密集。</p>
+
+<ol>
+  <li>
+    <p><strong>Search</strong></p>
+
+    <p>搜索从最高层开始，每当在各层节点中贪心找到当前最近邻居时，就向下搜索一层。最终，在最底层找到的近邻就是查询的答案。</p>
+
+    <p>我们会寻找与查询向量最近的 efSearch（一个超参数）近邻，并将这些近邻中的每一个作为下一层的切入点。</p>
+
+    <p><img src="../../assets/images/image-20241016110535933.png" class="center-image" alt="image-20241016110535933" style="zoom:50%;" /></p>
+  </li>
+  <li>
+    <p><strong>Construction</strong></p>
+  </li>
+</ol>
+
+<ul>
+  <li><strong>层级参数（$L$）</strong> ：决定图有多少层。</li>
+  <li><strong>层级乘数（$m_L$）</strong> ：影响向量被分配到各层的概率。</li>
+  <li><strong>连接参数（M, M_max, M_max0）</strong> ：决定每个节点的连接数。</li>
+  <li><strong>搜索参数（ef, efConstruction）</strong> ：影响搜索时的邻居数量</li>
+</ul>
+
+<p>假设我们要插入一个新节点 $q$：</p>
+
+<ol>
+  <li>
+    <p>根据概率函数和 $m_L$，被随机分配一个整数 $L$. 表示该节点在图中能出现的最大层数。</p>
+  </li>
+  <li>
+    <p>节点被赋值层数 $L$ 后，其插入分为两个阶段：</p>
+
+    <ol>
+      <li>算法从顶层开始，贪心寻找最近的节点。然后将找到的节点作为下一层的入口点，继续搜索过程。一旦到达第 $l$ 层，插入就进入第二步。(在 $L$ 层之前都不插入)</li>
+      <li>从第 $l$ 层开始，算法在当前层插入新节点。然后，该算法与步骤 a 相同，但不再只寻找一个最近的邻居，而是寻找 <code class="language-plaintext highlighter-rouge">efConstruction</code>（超参数）最近的邻居。然后，从 <code class="language-plaintext highlighter-rouge">efConstruction</code> 近邻中选出 M 个，并建立从插入节点（新节点）到它们的边。之后，算法进入下一层，每个找到的 efConstruction 节点都是一个入口点。新节点及其边插入最底层 0 后，算法结束。</li>
+    </ol>
+
+    <p><img src="../../assets/images/image-20241016110553892.png" class="center-image" alt="image-20241016110553892" style="zoom:50%;" /></p>
+  </li>
+</ol>
+
+<h3 id="3-lsh--locality-sensitive-hashing--局部敏感哈希">3. LSH | Locality-Sensitive Hashing | 局部敏感哈希</h3>
+
+<p>旨在通过哈希函数将相似的数据点映射到相同的桶中，从而提高在大规模数据集中查找相似项的效率。</p>
+
+<h2 id="similarity-measures"><strong>Similarity Measures</strong></h2>
+
+<p>一旦通过索引定位到了可能相似的向量集，然后需要量化查询向量与该集合中每个向量之间的相似度。</p>
+
+<h4 id="余弦相似性cosine-similarity"><strong>余弦相似性（Cosine Similarity）</strong>：</h4>
+
+<p>度量两个向量在方向上的相似度，常用于文本数据，因为它只考虑向量之间的角度，而不受向量长度的影响。</p>
+
+\[Cosine Similarity = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \|\mathbf{B}\|}\]
+
+<p>其中，$\mathbf{A} \cdot \mathbf{B}$ 表示向量 $\mathbf{A}$ 和 $\mathbf{B}$ 的点积，$|\mathbf{A}|$ 和 $|\mathbf{B}|$ 表示向量的范数（即向量的长度）。</p>
+
+<h4 id="点积dot-product"><strong>点积（Dot Product）</strong>：</h4>
+
+<p>数学上表示两个向量的相似度，可以看作是向量在长度和方向上的综合相似度。</p>
+
+\[\mathbf{A} \cdot \mathbf{B} = \sum_{i=1}^{n} A_i B_i\]
+
+<p>其中，$A_i$ 和 $B_i$ 是向量 $\mathbf{A}$ 和 $\mathbf{B}$ 的第 $i$ 个元素。</p>
+
+<h4 id="欧几里得距离euclidean-distancel2-距离"><strong>欧几里得距离（Euclidean Distance）（L2 距离）</strong>：</h4>
+
+<p>度量两个点在多维空间中的实际距离，适用于长度和方向同时重要的场景。距离（分数）越近，越相似。</p>
+
+\[d(\mathbf{A}, \mathbf{B}) = \sqrt{\sum_{i=1}^{n} (A_i - B_i)^2}\]
+
+<p>其中，$A_i$ 和 $B_i$ 是点 $\mathbf{A}$ 和 $\mathbf{B}$ 在第 $i$ 维的坐标。</p>
+
+<h4 id="曼哈顿距离manhattan-distance"><strong>曼哈顿距离（Manhattan Distance）</strong>：</h4>
+
+<p>度量在标准坐标系上点到点之间的距离，适用于网格状结构的数据。</p>
+
+\[d(\mathbf{A}, \mathbf{B}) = \sum_{i=1}^{n} |A_i - B_i|\]
+
+<h4 id="汉明距离hamming-distance"><strong>汉明距离（Hamming Distance）</strong>：</h4>
+
+<p>度量两个等长字符串之间的差异，主要应用于信息编码。</p>
+
+\[d(\mathbf{A}, \mathbf{B}) = \sum_{i=1}^{n} \begin{cases} 0, &amp; \text{if } A_i = B_i \\ 1, &amp; \text{if } A_i \neq B_i \end{cases}\]
+
+<p>其中，$A_i$ 和 $B_i$ 是字符串 $\mathbf{A}$ 和 $\mathbf{B}$ 的第 $i$ 个字符。</p>
+
+<p><strong><em>Reference:</em></strong></p>
+
+<p><a href="https://medium-parser.vercel.app/?url=https://towardsdatascience.com/explaining-vector-databases-in-3-levels-of-difficulty-fc392e48ab78">Explaining Vector Databases in 3 Levels of Difficulty</a></p>
+
+<h4 id="applications">Applications</h4>
+
+<p><a href="https://www.notion.so/FAISS-aaa88d24999843bba2cdb2032dc80d06?pvs=21">FAISS</a></p>
+
+<p><a href="https://www.notion.so/PostgreSQL-PGVector-87a8f3dbae424eed910a4109a1e45eab?pvs=21">PostgreSQL &amp; PGVector</a></p>
+
+<h2 id="3-fusion-of-keyword-based-and-vector-search-results"><strong>3. Fusion of keyword-based and vector search results</strong></h2>
+
+<p>有许多不同的策略可以将两个列表的排名结果合并为一个单一的排名。一般来说，搜索结果通常会首先被评分。这些分数可以根据指定的度量标准计算，例如余弦距离，或者只是搜索结果列表中的排名。然后，这些分数会根据参数 <code class="language-plaintext highlighter-rouge">alpha</code> 进行加权，该参数决定每个算法的权重并影响结果的重新排序。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hybrid_score = (1 - alpha) * sparse_score + alpha * dense_score
+</code></pre></div></div>
+
+<p>控制关键字搜索和语义搜索之间权重的参数 <strong><code class="language-plaintext highlighter-rouge">alpha</code></strong> 可以视为需要调整的超参数。</p>
+
+<p>注意： 对于 faiss 默认使用<strong>欧式距离</strong>来表示向量相似，它是分数越低相似度越高。在计算 hybrid_score 时，需要将欧氏距离转换为相似度得分。</p>
+
+<h1 id="graph-rag">Graph RAG</h1>
+
+<p><a href="https://www.notion.so/Graph-RAG-e5460233167c4889861c032a5e856453?pvs=21">Graph RAG</a></p>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+
+                        <a href="/llm/app/llm-evaluation" class="navigation navigation-prev navigation-unique" aria-label="Previous page: LLM 评估指南">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "pillar's blog",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_llm/LLM 应用/混合检索.md",
+        "mtime": "2024-10-16 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2024-10-16 14:23:24 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+</body>
+</html>

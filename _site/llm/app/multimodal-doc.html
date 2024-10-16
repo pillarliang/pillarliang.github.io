@@ -109,6 +109,24 @@
                                                 </a>
                                             </li>
                                         
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/agentic-patterns">
+                                                <a href="/llm/app/agentic-patterns" onclick="pageScrollToTop(this)">
+                                                    Agentic Design Patterns
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/llm-evaluation">
+                                                <a href="/llm/app/llm-evaluation" onclick="pageScrollToTop(this)">
+                                                    LLM 评估指南
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="chapter" data-level="1.1" data-path="/llm/app/hybrid-search">
+                                                <a href="/llm/app/hybrid-search" onclick="pageScrollToTop(this)">
+                                                    混合检索
+                                                </a>
+                                            </li>
+                                        
                                     </ul>
                                 </li>
                             
@@ -143,98 +161,6 @@
                         
                             <!-- 处理其他集合 -->
                             
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2019-04-27-why.html">
-                                    <a href="/jekyll/2019-04-27-why.html" onclick="pageScrollToTop(this)">
-                                        Why Jekyll with GitBook
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2019-04-28-howto.html">
-                                    <a href="/jekyll/2019-04-28-howto.html" onclick="pageScrollToTop(this)">
-                                        How to Get Started
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2019-04-29-license.html">
-                                    <a href="/jekyll/2019-04-29-license.html" onclick="pageScrollToTop(this)">
-                                        License
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2021-08-10-toc.html">
-                                    <a href="/jekyll/2021-08-10-toc.html" onclick="pageScrollToTop(this)">
-                                        How to Generate TOC
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2022-05-24-page_cover.html">
-                                    <a href="/jekyll/2022-05-24-page_cover.html" onclick="pageScrollToTop(this)">
-                                        Page with cover image
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2022-06-26-wide_tables.html">
-                                    <a href="/jekyll/2022-06-26-wide_tables.html" onclick="pageScrollToTop(this)">
-                                        Wide tables
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2022-06-30-tips_warnings_dangers.html">
-                                    <a href="/jekyll/2022-06-30-tips_warnings_dangers.html" onclick="pageScrollToTop(this)">
-                                        Tips, Warnings, and Dangers
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2023-08-31-mermaid.html">
-                                    <a href="/jekyll/2023-08-31-mermaid.html" onclick="pageScrollToTop(this)">
-                                        Diagrams with mermaid.js
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2023-10-14-math-latex.html">
-                                    <a href="/jekyll/2023-10-14-math-latex.html" onclick="pageScrollToTop(this)">
-                                        MathJax and LaTeX
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                                <li class="chapter" data-level="1.1" data-path="/jekyll/2023-12-12-footnotes.html">
-                                    <a href="/jekyll/2023-12-12-footnotes.html" onclick="pageScrollToTop(this)">
-                                        Using Footnotes
-                                    </a>
-                                    
-                                        
-                                    
-                                </li>
-                            
-                            
-                                <li class="divider"></li>
                             
                         
                     
@@ -266,7 +192,7 @@
                             
                                 <li class="chapter" data-level="1.1" data-path="/pages/design/draft/">
                                     <a href="/pages/design/draft/" onclick="pageScrollToTop(this)">
-                                        Design Draft
+                                        Draft
                                     </a>
                                     
                                         
@@ -340,6 +266,11 @@
   <li>文档内容后处理（layout recognition）: 移除无效区域 - 根据区域定位信息拼接内容 - 获取不同文档区域的定位、内容和排序信息</li>
   <li>格式转换: 生成所需的各种格式 (如 Markdown)</li>
 </ol>
+
+<blockquote>
+  <p>使用 paddleOCR 进行文档解析生成 markdown ：https://github.com/pillarliang/TextParse</p>
+
+</blockquote>
 
 <p>既然文件中的图片可以用多模态 embedding，那可以试试直接将文档页面转为 Image 做 embedding。</p>
 
@@ -435,6 +366,8 @@
 
 <p>但是，文档中往往涉及很多不同的类型的数据，直接转为一张 Image 用 Jina clip 做 embedding 来是能力欠缺。这种方式表现出信息损失：要么文本信息丢失，要么表格被误解，要么格式的重要性丢失。</p>
 
+<p>code &amp; demo:</p>
+
 <h2 id="colpali-多模态文档检索模型">ColPali 多模态文档检索模型</h2>
 
 <p>ColPali 通过直接处理文档图像来解决这些问题，消除了复杂预处理的步骤，实现更快、更准确的检索。</p>
@@ -523,6 +456,8 @@
 <p><a href="https://github.com/AnswerDotAI/byaldi">byaldi</a> 一个封装了 colpali 接口的库。</p>
 
 <p>Byaldi索引默认是存储在文件中的，如果要存储到数据库中，就不能用了。</p>
+
+<p>Code &amp; demo:</p>
 
 <h3 id="colbert-contextualized-late-interaction-bert">ColBert| Contextualized Late Interaction BERT</h3>
 
@@ -752,7 +687,7 @@ window.MathJax = {
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2024-09-30 18:28:13 +0800"
+        "time": "2024-10-16 14:23:24 +0800"
     },
     "basePath": "",
     "book": {
