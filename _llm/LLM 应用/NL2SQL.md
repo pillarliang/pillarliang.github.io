@@ -1,5 +1,5 @@
 ---
-title: "NL2SQL[WIP]"
+title: "NL2SQL"
 author: pillar
 date: 2024-09-20
 category: llm
