@@ -11,4 +11,5 @@ permalink: /
 - [NL2SQL](/llm/app/nl2sql)
 - [LLM 评估指南](/llm/app/llm-evaluation)
 - [模型部署](/llm/app/llm-deploy)
+- [RAG & Agent?](/llm/app/rag-agent)
 
